@@ -16,7 +16,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Chrome headless
-      uses: ./
+      uses: cypress-io/github-action@v6
       with:
         browser: chrome
         run: npx cypress run
