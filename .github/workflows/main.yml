@@ -1,0 +1,22 @@
+# This workflow will test a Cucumber Java project with Maven.
+
+name: Java CI/CD with npm cypress
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  Windows-Run:
+    runs-on: windows-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: Cypress run
+      uses: cypress-io/github-actions@v6
+      with:
+        start: npx cypress run
+
