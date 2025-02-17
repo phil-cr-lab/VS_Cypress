@@ -19,7 +19,8 @@ jobs:
       uses: cypress-io/github-action@v6
       with:
         browser: chrome
-        run: npx cypress run
+    - name: Run tests
+      run: npx cypress run
         
 
 
