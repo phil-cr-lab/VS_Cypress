@@ -15,12 +15,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Chrome headless
+    - name: Run tests on Chrome headless
       uses: cypress-io/github-action@v6
       with:
         browser: chrome
-    - name: Run tests
-      run: npx cypress run
-        
-
-
+    
