@@ -6,7 +6,8 @@ describe('Create a user using the UI', () => {
   })
 
   it('Type a name in the first name field', () => {
-    cy.get('[id="firstName"]').type("Tester").should('have.value', "Tester")
+    cy.fixture('example').then(example => {
+      cy.get('[id="firstName"]').type(example.firstName).should('have.value', example.firstName)
+    })
   })
-
 })
